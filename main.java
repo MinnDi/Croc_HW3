@@ -34,7 +34,7 @@ public class main {
             int x2=pos2x;
             System.out.println(x1+" "+pos1y+" "+ x2+" "+pos2y);
             try {
-                if (Math.abs(x1-x2)!=1&&Math.abs(pos1y-pos2y)!=2||Math.abs(x1-x2)!=2&&Math.abs(pos1y-pos2y)!=1)
+                if (!(Math.abs(x1-x2)==1&&Math.abs(pos1y-pos2y)==2||Math.abs(x1-x2)==2&&Math.abs(pos1y-pos2y)==1))
                     throw new IllegalMoveExeption(pos1x, pos1y, pos2x, pos2y);
             }catch (IllegalMoveExeption e){
                 return "Конь так не ходит: "+e.getGoFromX()+e.getGoFromY()+"->"+e.getGoToX()+e.getGoToY()+". \n";
